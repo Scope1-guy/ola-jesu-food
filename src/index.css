@@ -1,0 +1,197 @@
+/* ============================================
+   Global styles and design tokens
+   Every color/spacing value the site uses is
+   defined once here as a CSS variable, so the
+   whole look can be adjusted from one place.
+   ============================================ */
+
+:root {
+  --color-primary: #1f5c34; /* deep green */
+  --color-primary-dark: #16401f;
+  --color-primary-light: #e8f2ea;
+  --color-accent: #d8a73e; /* warm gold, used sparingly */
+  --color-text: #24291f;
+  --color-text-muted: #5c6355;
+  --color-bg: #ffffff;
+  --color-bg-alt: #f7f5ef;
+  --color-border: #e4e0d4;
+
+  --font-heading: "Poppins", "Segoe UI", sans-serif;
+  --font-body: "Inter", "Segoe UI", sans-serif;
+
+  --max-width: 1200px;
+  --radius: 10px;
+  --shadow-card: 0 2px 10px rgba(31, 41, 25, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-heading);
+  color: var(--color-primary-dark);
+  line-height: 1.2;
+  margin: 0 0 0.5em 0;
+}
+
+p {
+  margin: 0 0 1em 0;
+  color: var(--color-text-muted);
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+button {
+  font-family: inherit;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Visible keyboard focus outline for accessibility */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.section {
+  padding: 64px 0;
+}
+
+.section-heading {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 8px;
+}
+
+.section-heading h2 {
+  font-size: 2rem;
+  position: relative;
+  padding-bottom: 12px;
+}
+
+.section-heading h2::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 48px;
+  height: 3px;
+  background-color: var(--color-primary);
+}
+
+.section-intro {
+  max-width: 60ch;
+  margin-bottom: 32px;
+}
+
+.link-arrow {
+  color: var(--color-primary);
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.link-arrow::after {
+  content: "\2192";
+  margin-left: 6px;
+  display: inline-block;
+  transition: transform 0.15s ease;
+}
+
+.link-arrow:hover::after {
+  transform: translateX(3px);
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 22px;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: background-color 0.15s ease, color 0.15s ease,
+    border-color 0.15s ease;
+}
+
+.btn-primary {
+  background-color: var(--color-primary);
+  color: #ffffff;
+}
+
+.btn-primary:hover {
+  background-color: var(--color-primary-dark);
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: #ffffff;
+  border-color: #ffffff;
+}
+
+.btn-outline:hover {
+  background-color: #ffffff;
+  color: var(--color-primary-dark);
+}
+
+.btn-whatsapp {
+  background-color: #25d366;
+  color: #ffffff;
+}
+
+.btn-whatsapp:hover {
+  background-color: #1ebd58;
+}
+
+@media (max-width: 640px) {
+  .section {
+    padding: 44px 0;
+  }
+
+  .section-heading h2 {
+    font-size: 1.6rem;
+  }
+}

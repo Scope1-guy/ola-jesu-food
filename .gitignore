@@ -1,0 +1,15 @@
+# dependencies
+/node_modules
+
+# production build
+/build
+
+# misc
+.DS_Store
+npm-debug.log*
+
+
+# keep these out of Github
+.env
+CODE_EXPLANATION.txt
+README.md

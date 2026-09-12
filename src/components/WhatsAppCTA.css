@@ -1,0 +1,26 @@
+.whatsapp-cta {
+  background-color: var(--color-primary);
+}
+
+.whatsapp-cta-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding: 28px 20px;
+}
+
+.whatsapp-cta-text {
+  color: #ffffff;
+  margin: 0;
+  max-width: 46ch;
+  font-weight: 500;
+}
+
+@media (max-width: 600px) {
+  .whatsapp-cta-inner {
+    text-align: center;
+    justify-content: center;
+  }
+}

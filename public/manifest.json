@@ -1,0 +1,9 @@
+{
+  "short_name": "Mama Grace Foodstuff",
+  "name": "Mama Grace Foodstuff - Quality Foodstuff, Always",
+  "icons": [],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#1f5c34",
+  "background_color": "#ffffff"
+}

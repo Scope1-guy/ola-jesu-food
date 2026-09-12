@@ -1,0 +1,14 @@
+.whatsapp-btn {
+  text-decoration: none;
+}
+
+.whatsapp-btn-outline {
+  background-color: transparent;
+  color: #ffffff;
+  border: 2px solid #ffffff;
+}
+
+.whatsapp-btn-outline:hover {
+  background-color: #ffffff;
+  color: var(--color-primary-dark);
+}
